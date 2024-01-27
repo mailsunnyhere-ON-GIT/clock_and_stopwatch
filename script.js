@@ -25,7 +25,8 @@ function startStopwatch() {
     } else {
         isRunning = false;
         clearInterval(timer);
-        document.getElementById("startStopButton").innerText = "Start";
+        let startstoper=document.getElementById("startStopButton")
+        startstoper.innerText = "Start";
     }
 }
 
@@ -36,7 +37,8 @@ function resetStopwatch() {
     minutes = 0;
     hours = 0;
     updateDisplay();
-    document.getElementById("startStopButton").innerText = "Start";
+    let elem=document.getElementById("startStopButton")
+    elem.innerText = "Start";
 }
 
 function updateTime() {
@@ -61,8 +63,10 @@ function pad(number) {
     return (number < 10 ? "0" : "") + number;
 }
 
-document.getElementById("startStopButton").addEventListener("click", startStopwatch);
-document.getElementById("resetButton").addEventListener("click", resetStopwatch);
+let starter=document.getElementById("startStopButton")
+starter.addEventListener("click", startStopwatch);
+let reseter=document.getElementById("resetButton")
+reseter.addEventListener("click", resetStopwatch);
 
 
 
